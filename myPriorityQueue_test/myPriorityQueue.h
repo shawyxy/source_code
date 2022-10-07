@@ -89,7 +89,7 @@ namespace xy
                         {
                             child++;
                         }
-                        if (_comp(_con[parent], _con[child]))
+                        if (_cmp(_con[parent], _con[child]))
                         {
                             //父子结点交换
                             swap(_con[child], _con[parent]);
