@@ -31,6 +31,16 @@ int main()
 		//3. 解析命令
 		g_argv[0] = strtok(cmd_line, SEP);//strtok第一次要传入字符串地址
 		int index = 1;
+		if(strcmp(g_argv[0], "ls") == 0)
+		{
+		    g_argv[index++] = "--color=auto";
+		}
+		if(strcmp(g_argv[0], "ll") == 0)
+		{
+		    g_argv[0] = "ls";
+		    g_argv[index++] = "-l";
+		    g_argv[index++] = "--color=auto";
+		}
 		while(g_argv[index++] = strtok(NULL, SEP));//传入NULL，表示继续分割
 		// 测试是否解析成功
 		// for(int i = 0; g_argv[i]; i++)
@@ -56,11 +66,11 @@ int main()
 			// }
 			//4. TODO，内置指令
 			if(strcmp(g_argv[0], "cd") == 0) 
-	        {
-	            if(g_argv[1] != NULL) chdir(g_argv[1]); //cd path, cd ..
+			{
+			    if(g_argv[1] != NULL) chdir(g_argv[1]); //cd path, cd ..
 
-	            continue;
-	        }
+			    continue;
+			}
 		}
 	}
 
