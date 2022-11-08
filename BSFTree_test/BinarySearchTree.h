@@ -80,8 +80,8 @@ public:
                         else if(cur == parent->_right)// 待删除结点为父结点的右孩子
                             parent->_right = cur->_right;// 将左孩子的右子树链接到父结点的右孩子上
                     }
-					delete cur;					// 释放结点资源
-					return true;				// 表示删除成功
+		delete cur;			// 释放结点资源
+		return true;			// 表示删除成功
                 }
                 else if(cur->_right == nullptr) // 2. 待删除结点的右子树为空，步骤相同
                 {
@@ -94,8 +94,8 @@ public:
                         else if(cur == parent->_right)
                             parent->_right = cur->_left;
                     }
-					delete cur;					// 释放结点资源
-					return true;				// 表示删除成功
+		delete cur;			// 释放结点资源
+		return true;			// 表示删除成功
                 }
                 else                        // 3. 待删除结点左右子树均不为空，使用替换法
                 {
