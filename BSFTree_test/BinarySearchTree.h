@@ -4,7 +4,6 @@
 #pragma once
 #include <iostream>
 #include <vector>
-#define nullptr NULL
 
 using namespace std;
 // 定义结点类
